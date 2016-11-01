@@ -41,8 +41,30 @@ function ageChecker (age, movie) {
     $("#age-warning").text("");
   }
 }
-// Checks if inputs are blank and shows the relevant warning messages if they are.
-function blankChecker(movie, time, age)
+// Checks if inputs are blank and shows the relevant warning messages if they are. Returns true if no fields are blank, returns false if there are any blank fields.
+function blankChecker(movie, time, age) {
+  if(movie === "") {
+    $("#warning-1").show();
+  } else {
+    $("#warning-1").hide();
+  }
+  if(time === "") {
+    $("#warning-2").show();
+  } else {
+    $("#warning-2").hide();
+  }
+  if(age === "") {
+    $("#warning-3").show();
+  } else {
+    $("#warning-3").hide();
+  }
+
+  if(movie !== "" && time !== "" && age !== "") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // UI below this line.
 $(function() {
@@ -53,15 +75,18 @@ $(function() {
     var inputtedTime = $("select#time").val();
     var inputtedAge = $("select#age").val();
 
-    ageChecker(inputtedAge, inputtedMovie);
-    var userTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge);
-    console.log(userTicket);
-    userTicket.priceAdjuster();
-    console.log("After processing: $" + userTicket.price);
+    if(blankChecker(inputtedMovie, inputtedTime, inputtedAge)) {
+      ageChecker(inputtedAge, inputtedMovie);
+      var userTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge);
+      console.log(userTicket);
+      userTicket.priceAdjuster();
+      console.log("After processing: $" + userTicket.price);
 
-    $(".results").show();
-    $("#movie-name").text(userTicket.movie);
-    $("#movie-time").text(userTicket.time);
-    $("#movie-price").text(userTicket.price);
+      $(".results").show();
+      $("#movie-name").text(userTicket.movie);
+      $("#movie-time").text(userTicket.time);
+      $("#movie-price").text(userTicket.price);
+    }
+
   });
 });
