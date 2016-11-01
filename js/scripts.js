@@ -16,13 +16,13 @@ Ticket.prototype.priceAdjuster = function() {
     this.price -= 2;
   }
 
-  if(age === "under12") {
+  if(this.age === "under12") {
     this.price -= 1;
   }
-  if(age === "senior") {
+  if(this.age === "senior") {
     this.price -= 2;
   }
-  if(age === "superSenior") {
+  if(this.age === "superSenior") {
     this.price = 0;
   }
 }
