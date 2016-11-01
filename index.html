@@ -6,9 +6,59 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Movie Tickets</title>
   </head>
   <body>
+    <div class="container">
+      <h1>MOVIE TICKETS</h1>
+      <form id="ticket-select">
 
+        <h3>Movie</h3>
+        <select class="form-control" id="movie">
+          <option></option>
+          <option>Enter The Void</option>
+          <option>Sausage Party</option>
+          <option>Fleabag</option>
+          <option>Unbreakable</option>
+          <option>Rogue One</option>
+          <option>The Secret Life of Pets</option>
+          <option>Man on Wire</option>
+        </select>
+        <p class="select-warning" id="warning-1">Please Select a Movie</p>
+
+        <h3>Times</h3>
+        <select class="form-control" id="time">
+          <option></option>
+          <option>10am</option>
+          <option>12pm</option>
+          <option>2pm</option>
+          <option>4pm</option>
+          <option>6pm</option>
+          <option>8pm</option>
+          <option>10pm</option>
+        </select>
+        <p class="select-warning" id="warning-2">Please Select a Time</p>
+
+        <h3>Age</h3>
+        <select class="form-control" id="time">
+          <option></option>
+          <option>12 or under</option>
+          <option>13 - 17</option>
+          <option>18 - 64</option>
+          <option>65 - 99 </option>
+          <option>100 or over</option>
+        </select>
+        <p class="select-warning" id="warning-3">Please Select Your Age</p>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+
+      </form>
+          
+      <div class="results">
+        <h5>Movie:</h5>
+        <h5>Time:</h5>
+        <h4>Price:</h4>
+      </div>
+    </div>
   </body>
 </html>
