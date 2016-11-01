@@ -40,13 +40,13 @@
         <p class="select-warning" id="warning-2">Please Select a Time</p>
 
         <h3>Age</h3>
-        <select class="form-control" id="time">
+        <select class="form-control" id="age">
           <option></option>
-          <option>12 or under</option>
-          <option>13 - 17</option>
-          <option>18 - 64</option>
-          <option>65 - 99 </option>
-          <option>100 or over</option>
+          <option value="under12">12 or under</option>
+          <option value="teen">13 - 17</option>
+          <option value="normal">18 - 64</option>
+          <option value="senior">65 - 99 </option>
+          <option value="superSenior">100 or over</option>
         </select>
         <p class="select-warning" id="warning-3">Please Select Your Age</p>
 
@@ -56,9 +56,9 @@
 
       <div class="results">
         <h3>Your Ticket</h3>
-        <h5>Movie:</h5>
-        <h5>Time:</h5>
-        <h4>Price:</h4>
+        <h5>Movie: <span id="movie-name"></span></h5>
+        <h5>Time: <span id="movie-time"></span></h5>
+        <h4>Price: $<span id="movie-price"></span></h4>
       </div>
     </div>
   </body>
