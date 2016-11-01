@@ -1,0 +1,12 @@
+.select-warning, .results {
+  display: none;
+}
+
+.select-warning {
+  color: red;
+}
+
+.btn {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
